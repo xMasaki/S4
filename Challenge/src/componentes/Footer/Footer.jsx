@@ -1,28 +1,15 @@
-// import React from 'react'
-
-// export default function Footer() {
-//   return (
-//     <footer>
-//         <p>COPYRIGHT © 2024 MASAKI - TODOS OS DIREITOS RESERVADOS.</p>
-//     </footer>
-//   )
-// }
-
-
 import React from 'react';
-import registros from '../1Dados/Dados';
+import { Link } from 'react-router-dom';
 
-function Footer() {
-    const handlePrint = () => {
-        console.log(registros); // ou faça algo para exibir os registros na interface
-    };
-
+export default function Footer() {
     return (
         <div>
-            <h2>Imprimir</h2>
-            <button onClick={handlePrint}>Imprimir Registros</button>
+            <button>
+                <Link to="/home">Home</Link>
+            </button>
+            <button>
+                <Link to="/perfil">Perfil</Link>
+            </button>
         </div>
     );
 }
-
-export default Footer;
