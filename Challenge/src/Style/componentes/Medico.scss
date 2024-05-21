@@ -1,0 +1,218 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+// @include mixins.box();
+// @include mixins.div-config(w, h);
+// @include mixins.txt-config(fs, fw);
+
+// variaveis.$azul-escuro;
+// variaveis.$azul;
+
+// variaveis.$cinza-escuro;
+// variaveis.$cinza-claro;
+
+// variaveis.$cinza-box;
+// variaveis.$cor-modal;
+// variaveis.$cor-menu;
+
+// variaveis.$preto;
+// variaveis.$branco;
+
+@media screen and (max-width: 767px) {
+    #homeMedico {
+        margin-bottom: 8rem;
+    }
+    #buscaMedico {
+        @include mixins.box();
+    }
+    #inputBuscar {
+        @include mixins.div-config(65%, 2rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 20px;
+
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+    #btnBuscar {
+        @include mixins.div-config(25%, 2rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 20px;
+
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+    #buscaDados {
+        @include mixins.div-config(95%, auto);
+        margin: 0 auto;
+        background-color: variaveis.$cinza-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        h4{
+            color: variaveis.$cinza-escuro;
+            font-size: 2rem;
+        }
+        p {
+            color: variaveis.$cinza-escuro;
+            margin: 0;
+        }
+    }
+    #buscaExame {
+        @include mixins.div-config(95%, auto);
+        margin: 0 auto;
+        background-color: variaveis.$cinza-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        h4{
+            color: variaveis.$cinza-escuro;
+            font-size: 2rem;
+        }
+        p {
+            color: variaveis.$cinza-escuro;
+            margin: 0;
+        }
+        .pExameMedico{
+            font-size: 1.4rem;
+        }
+        div {
+            padding: .3rem 0
+        }
+    }
+    #listaMedico {
+        @include mixins.div-config(95%, 15rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 30px;
+
+
+        @include mixins.txt-config(3rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #homeMedico {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 8rem;
+
+    }
+    #buscaMedico {
+        @include mixins.box();
+    }
+    #inputBuscar {
+        @include mixins.div-config(65%, 2rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 20px;
+
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+    #btnBuscar {
+        @include mixins.div-config(25%, 2rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 20px;
+
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+    #buscaDados {
+        @include mixins.div-config(30rem, auto);
+        margin: 0 auto;
+        background-color: variaveis.$cinza-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        h4{
+            color: variaveis.$cinza-escuro;
+            font-size: 2rem;
+        }
+        p {
+            color: variaveis.$cinza-escuro;
+            margin: 0;
+        }
+    }
+    #buscaExame {
+        @include mixins.div-config(30rem, auto);
+        margin: 0 auto;
+        background-color: variaveis.$cinza-box;
+        padding: 1rem;
+        border-radius: 1rem;
+        margin: 1rem;
+        h4{
+            color: variaveis.$cinza-escuro;
+            font-size: 2rem;
+        }
+        p {
+            color: variaveis.$cinza-escuro;
+            margin: 0;
+        }
+        .pExameMedico{
+            font-size: 1.4rem;
+        }
+        div {
+            padding: .3rem 0
+        }
+    }
+    #listaMedico {
+        @include mixins.div-config(30rem, 15rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 30px;
+
+
+        @include mixins.txt-config(3rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}

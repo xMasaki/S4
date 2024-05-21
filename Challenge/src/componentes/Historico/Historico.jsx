@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import dados from "../json/dados.json";
 
+import '../../Style/componentes/Historico.scss';
+
 export default function Historico() {
   const [examesEmBreve, sevalExamesEmBreve] = useState([]);
   const [examesConcluidos, sevalExamesConcluidos] = useState([]);
@@ -24,36 +26,41 @@ export default function Historico() {
   };
 
   return (
-    <div>
-      <h3>Histórico de Exames</h3>
-      <div>
-        <button onClick={handleEmBreve}>Em Breve</button>
-        <button onClick={handleConcluido}>Concluído</button>
+    <div id='itemsHistorico'>
+      <h3 id='tituloHistorico'>Exames</h3>
+      <div id='btnsHistorico'>
+        <button id='btnHistorico' onClick={handleEmBreve}>Agendados</button>
+        <button id='btnHistorico' onClick={handleConcluido}>Realizados</button>
       </div>
-      
+
       {examesEmBreve.length > 0 && (
         <div>
-          <h4>Exames em Breve</h4>
           {examesEmBreve.map(item => (
-            <div key={item.numExame}>
-              <h2>{item.exame}</h2>
-              <p>Data: {item.dataExame}</p>
-            </div>
+            Array.from({ length: item.numExame }, (_, index) => (
+              <div id='boxHistorico' key={index}>
+                <h2 id='tituloBoxHistorico'>{item.exame[index]}</h2>
+                <p id='textoBoxHistorico'>Data: {item.dataExame[index]}</p>
+                <p id='textoBoxHistorico'>Local: {item.localExame[index]}</p>
+              </div>
+            ))
           ))}
         </div>
       )}
 
       {examesConcluidos.length > 0 && (
         <div>
-          <h4>Exames Concluídos</h4>
           {examesConcluidos.map(item => (
-            <div key={item.numHistorico}>
-              <h2>{item.historico}</h2>
-              <p>Data: {item.dataHistorico}</p>
-            </div>
+            Array.from({ length: item.numHistorico }, (_, index) => (
+              <div id='boxHistorico' key={index}>
+                <h2 id='tituloBoxHistorico'>{item.historico[index]}</h2>
+                <p id='textoBoxHistorico'>Data: {item.dataHistorico[index]}</p>
+                <p id='textoBoxHistorico'>Local: {item.localHistorico[index]}</p>
+              </div>
+            ))
           ))}
         </div>
       )}
     </div>
   );
 }
+

@@ -3,6 +3,8 @@ import fs from "fs";
 import registros from '../1Dados/Dados';
 import dados from '../json/dados.json';
 
+import '../../Style/componentes/Triagem.scss';
+
 function Formulario() {
     const [tipo, valTipo] = useState('');
     const [nome, valNome] = useState('');
@@ -35,11 +37,11 @@ function Formulario() {
     };
 
     return (
-        <div>
+        <div id='itemsTriagem'>
             <h2>Formulário</h2>
-            <form onSubmit={handleSubmit}>
+            <form id='formTriagem' onSubmit={handleSubmit}>
                 {/* num de registro */}
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="tipo">Tipo:</label>
                     <select id="tipo" value={tipo} onChange={(e) => valTipo(e.target.value)}>
                         <option value="">Selecione</option>
@@ -47,15 +49,15 @@ function Formulario() {
                         <option value="medico">Médico</option>
                     </select>
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="nome">Nome:</label>
                     <input type="text" id="nome" value={nome} onChange={(e) => valNome(e.target.value)} />
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="sobrenome">Sobrenome:</label>
                     <input type="text" id="sobrenome" value={sobrenome} onChange={(e) => valSobrenome(e.target.value)} />
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="sexo">Sexo:</label>
                     <select id="sexo" value={sexo} onChange={(e) => valSexo(e.target.value)}>
                         <option value="">Selecione</option>
@@ -63,23 +65,23 @@ function Formulario() {
                         <option value="feminino">Feminino</option>
                     </select>
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="celular">Número de Celular:</label>
                     <input type="tel" id="celular" value={celular} onChange={(e) => valCelular(e.target.value)} />
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="email">E-mail:</label>
                     <input type="email" id="email" value={email} onChange={(e) => valEmail(e.target.value)} />
                 </div>
-                <div>
-                    <label htmlFor="endereco">Endeeço:</label>
+                <div id='divTriagem'>
+                    <label htmlFor="endereco">Endereço:</label>
                     <input type="text" id="endereco" value={endereco} onChange={(e) => valEndereco(e.target.value)} />
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="numero">Número:</label>
                     <input type="number" id="numero" value={numero} onChange={(e) => valNumero(e.target.value)} />
                 </div>
-                <div>
+                <div id='divTriagem'>
                     <label htmlFor="senha">Senha:</label>
                     <input type="password" id="senha" value={senha} onChange={(e) => valSenha(e.target.value)} />
                 </div>

@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import dados from "../json/dados.json"
+import logo from "../../img/logo.png"
+import txtLogo from "../../img/S.png"
+
+import "../../Style/componentes/Login.scss"
 
 function verificarCredenciais(registro, senha) {
     const usuarios = dados
@@ -31,20 +35,20 @@ export default function Login() {
     }
 
     return (
-        <div>
-            <h2>Login</h2>
-            {erro && <p style={{ color: 'red' }}>{erro}</p>}
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Registro:
-                    <input type="number" value={registro} onChange={(e) => valRegistro(e.target.value)} />
-                </label>
-                <label>
-                    Senha:
-                    <input type="password" value={senha} onChange={(e) => valSenha(e.target.value)} />
-                </label>
-                <button type="submit">Entrar</button>
-            </form>
-        </div>  
+        <div id='allLogin'>
+            <div id='Login'>
+                <div id='Logos'>
+                    <img id='imgLogo' src={logo} alt="logo" />
+                    <img id='txtLogo' src={txtLogo} alt="SISSI" />
+                </div>
+
+                {erro && <p style={{ color: 'red' }}>{erro}</p>}
+                <form id='formLogin' onSubmit={handleSubmit}>
+                        <input id='registroLogin' type="number" placeholder='Digite seu registro' value={registro} onChange={(e) => valRegistro(e.target.value)} />
+                        <input id='senhaLogin' type="password" placeholder='Digite sua senha' value={senha} onChange={(e) => valSenha(e.target.value)} />
+                    <button id='btnLogin' type="submit">Entrar</button>
+                </form>
+            </div>
+        </div>
     );
 }

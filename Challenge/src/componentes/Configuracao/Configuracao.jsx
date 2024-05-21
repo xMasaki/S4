@@ -4,7 +4,6 @@ export default function Configuracao() {
   return (
     <div>
         <h4>modo escuro</h4>
-        <button>o</button>
     </div>
   )
 }

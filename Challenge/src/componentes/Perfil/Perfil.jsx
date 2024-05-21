@@ -3,10 +3,10 @@ import fs from "fs";
 import dados from '../json/dados.json';
 
 export default function Perfil() {
-    const [email, setEmail] = useState('');
-    const [confirmarEmail, setConfirmarEmail] = useState('');
-    const [contato, setContato] = useState('');
-    const [confirmarContato, setConfirmarContato] = useState('');
+    const [email, valEmail] = useState('');
+    const [confirmarEmail, valConfirmarEmail] = useState('');
+    const [contato, valContato] = useState('');
+    const [confirmarContato, valConfirmarContato] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -42,10 +42,6 @@ export default function Perfil() {
                 <h4>Nome</h4>
                 <div>
                     <h5>nome</h5>
-                </div>
-                <h4>Nascimento</h4>
-                <div>
-                    <h5>data</h5>
                 </div>
             </div>
             <div>

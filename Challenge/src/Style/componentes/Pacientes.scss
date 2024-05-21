@@ -1,0 +1,72 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #registroLista{
+        @include mixins.box();
+        flex-direction: column;
+        margin-bottom: 8rem;
+    }
+    #itemLista {
+        background-color: variaveis.$cinza-box;
+
+        margin: 1rem;
+        border: none;
+        border-radius: 1rem;
+    }
+    #pacienteLista {
+        @include mixins.box();
+        flex-direction: column;
+        padding: 1rem;
+        
+    }
+    #pacienteListaRow {
+        display: flex;
+        justify-content: left;
+        p {
+            width: 90%;
+            display: flex;
+            justify-content: start;
+            margin: .1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #registroLista{
+        @include mixins.box();
+        flex-direction: column;
+        margin-bottom: 8rem;
+    }
+    #itemLista {
+        background-color: variaveis.$cinza-box;
+
+        margin: 1rem auto;
+        border: none;
+        border-radius: 1rem;
+
+        @include mixins.div-config(30rem, auto);
+    }
+    #pacienteLista {
+        @include mixins.box();
+        flex-direction: column;
+        padding: 1rem;
+        h2 {
+            font-size: 2rem;
+        }
+    }
+    #pacienteListaRow {
+        display: flex;
+        justify-content: left;
+        p {
+            width: 90%;
+            display: flex;
+            justify-content: start;
+            margin: .1rem;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}

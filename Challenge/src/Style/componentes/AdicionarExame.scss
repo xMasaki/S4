@@ -1,0 +1,95 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #itensAdicionar {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include mixins.txt-config(3rem, auto);
+            color: variaveis.$cinza-escuro;
+        }
+    }
+    #formAdicionar {
+        @include mixins.div-config(95%, h);
+        @include mixins.box();
+        flex-direction: column;
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+        gap: 1rem;
+
+        background-color: variaveis.$cinza-box;
+        label {
+            @include mixins.txt-config(1.5rem, auto);
+            color: variaveis.$cinza-escuro;
+        }
+        input, select {
+            background-color: variaveis.$cor-menu;
+            @include mixins.div-config(60%, h);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            padding-left: .5rem;
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            background-color: variaveis.$cinza-box;
+            @include mixins.txt-config(1.5rem, auto);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            color: variaveis.$cinza-escuro;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #itensAdicionar {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include mixins.txt-config(3rem, auto);
+            color: variaveis.$cinza-escuro;
+        }
+    }
+    #formAdicionar {
+        @include mixins.box();
+        flex-direction: column;
+        padding: 2rem;
+        border: none;
+        border-radius: 1rem;
+        gap: 1rem;
+
+        background-color: variaveis.$cinza-box;
+        label {
+            @include mixins.txt-config(1.5rem, auto);
+            color: variaveis.$cinza-escuro;
+        }
+        input, select {
+            background-color: variaveis.$cor-menu;
+            @include mixins.div-config(60%, h);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            padding-left: .5rem;
+        }
+        div {
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            background-color: variaveis.$cinza-box;
+            @include mixins.txt-config(1.5rem, auto);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            color: variaveis.$cinza-escuro;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+
+}

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import '../../Style/componentes/Home.scss'
+
 export default function Home() {
 
     const navigate = useNavigate();
@@ -9,10 +11,10 @@ export default function Home() {
     const handleHistorico = () => navigate("/historico");
 
   return (
-    <div>
-        <button onClick={handleExame}>Exames</button>
-        <button onClick={handleHistorico}>Historico de Exames</button> 
-    </div>
+    <body id='bdHome'>
+        <button id='btnHome' onClick={handleExame}>Exames</button>
+        <button id='btnHome' onClick={handleHistorico}>Historico de Exames</button> 
+    </body>
         
   )
 }

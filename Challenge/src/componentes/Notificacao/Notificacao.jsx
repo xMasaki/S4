@@ -1,6 +1,8 @@
 import React from 'react';
 import dados from '../json/dados.json';
 
+import '../../Style/componentes/Notificacao.scss';
+
 export default function Notificacao() {
 
     const registroUsuario = JSON.parse(localStorage.getItem('usuario')).registro;
@@ -15,9 +17,10 @@ export default function Notificacao() {
         }));
 
         return (
-            <div>
+            <div id='itemsNotificacao'>
                 <h3>Notificações</h3>
-                <div>
+                <div id='listaNotificacao'>
+                    <h2>Proximos Exames</h2>
                     {proximosExames.map((item, index) => (
                         <div key={index}>
                             <h1>{item.exame}</h1>

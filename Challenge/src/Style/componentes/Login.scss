@@ -1,0 +1,217 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+.route-login {
+    header, footer {
+      display: none;
+}}
+
+@media screen and (max-width: 767px) {
+    #Login {
+        margin: 0 2rem;
+    }
+
+    #Logos {
+        @include mixins.box();
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #imgLogo {
+        @include mixins.box();
+        @include mixins.div-config(15rem, auto);
+        padding-top: 5rem;
+    }
+
+    #txtLogo {
+        @include mixins.box();
+        @include mixins.div-config(13rem, auto);
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    #formLogin {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #registroLogin, #senhaLogin {
+        @include mixins.div-config(100%, auto);
+        padding: .5rem;
+        margin: 1rem;
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border-radius: 4rem
+    }
+
+    #btnLogin {
+        @include mixins.div-config(40%, auto);
+        padding: .5rem;
+        margin-top: 1rem;
+
+        @include mixins.txt-config(1.5rem, 600);
+
+        background-color: variaveis.$azul-escuro;
+        color: variaveis.$branco;
+
+        border-radius: 4rem;
+        cursor: pointer;
+        
+    }
+}
+
+
+// -----------------------------------------------------------------
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #Login {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.div-config(20rem, 30rem);
+
+        padding: 2rem;
+        margin: 10rem auto;
+
+        border: 1px solid variaveis.$cinza-box;
+    }
+
+    #Logos {
+        @include mixins.box();
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #imgLogo {
+        @include mixins.box();
+        @include mixins.div-config(10rem, auto);
+        padding-top: 5rem;
+        margin: 0 auto;
+    }
+
+    #txtLogo {
+        @include mixins.box();
+        @include mixins.div-config(9rem, auto);
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    #formLogin {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #registroLogin, #senhaLogin {
+        @include mixins.div-config(100%, auto);
+        padding: .5rem;
+        margin: 1rem;
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border-radius: 4rem
+    }
+
+    #btnLogin {
+        @include mixins.div-config(40%, auto);
+        padding: .5rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$azul-escuro;
+        color: variaveis.$branco;
+
+        border-radius: 4rem;
+        cursor: pointer;
+        
+    }
+}
+
+
+
+// --------------------------------------------------------------------
+
+
+
+
+@media screen and (min-width: 1024px) {
+    #Login {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+
+        @include mixins.div-config(20rem, 30rem);
+
+        padding: 2rem;
+        margin: 15vh auto;
+
+        border: 1px solid variaveis.$cinza-box;
+    }
+
+    #Logos {
+        @include mixins.box();
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #imgLogo {
+        @include mixins.box();
+        @include mixins.div-config(10rem, auto);
+        padding-top: 5rem;
+        margin: 0 auto;
+    }
+
+    #txtLogo {
+        @include mixins.box();
+        @include mixins.div-config(9rem, auto);
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    #formLogin {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #registroLogin, #senhaLogin {
+        @include mixins.div-config(100%, auto);
+        padding: .5rem;
+        margin: 1rem;
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border-radius: 4rem
+    }
+
+    #btnLogin {
+        @include mixins.div-config(40%, auto);
+        padding: .5rem;
+        margin-top: 1rem;
+        margin-bottom: 5rem;
+
+        @include mixins.txt-config(1rem, 600);
+
+        background-color: variaveis.$azul-escuro;
+        color: variaveis.$branco;
+
+        border-radius: 4rem;
+        cursor: pointer;
+        
+    }
+}

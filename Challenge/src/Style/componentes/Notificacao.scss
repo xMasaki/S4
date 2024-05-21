@@ -1,0 +1,107 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #itemsNotificacao {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
+        h3 {
+            @include mixins.txt-config(2.5rem, 600);
+            color: variaveis.$cinza-escuro;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            @include mixins.txt-config(2rem, 600);
+            color: variaveis.$cinza-escuro;
+            margin-bottom: 2rem;
+        }
+        
+    }
+    #listaNotificacao {
+        @include mixins.div-config(95%, auto);
+        div{
+            padding: 1.5rem;
+            background-color: variaveis.$cinza-box;
+
+            border: none;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+
+            h1{
+                @include mixins.txt-config(1.5rem, 600);
+                color: variaveis.$cinza-escuro;
+                margin: 0;
+            }
+            p{
+                margin: 0;
+                color: variaveis.$cinza-escuro;
+            }
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #itemsNotificacao {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 8rem;
+        h3 {
+            @include mixins.txt-config(2.5rem, 600);
+            color: variaveis.$cinza-escuro;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            @include mixins.txt-config(2rem, 600);
+            color: variaveis.$cinza-escuro;
+            margin-bottom: 2rem;
+        }
+        
+    }
+    #listaNotificacao {
+        @include mixins.div-config(30rem, auto);
+        div{
+            padding: 1.5rem;
+            background-color: variaveis.$cinza-box;
+
+            border: none;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+
+            h1{
+                @include mixins.txt-config(1.5rem, 600);
+                color: variaveis.$cinza-escuro;
+                margin: 0;
+            }
+            p{
+                margin: 0;
+                color: variaveis.$cinza-escuro;
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+
+}
+
+
+// @include mixins.box();
+// @include mixins.div-config(w, h);
+// @include mixins.txt-config(fs, fw);
+
+
+// variaveis.$azul-escuro;
+// variaveis.$azul;
+
+// variaveis.$cinza-escuro;
+// variaveis.$cinza-claro;
+
+// variaveis.$cinza-box;
+// variaveis.$cor-modal;
+// variaveis.$cor-menu;
+
+// variaveis.$preto;
+// variaveis.$branco;
+
+// background-color: #F7C2C2;

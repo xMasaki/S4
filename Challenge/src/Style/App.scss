@@ -1,4 +1,7 @@
 @use './variaveis.scss';
+@use './mixins.scss';
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
 
 *{
     padding: 0;

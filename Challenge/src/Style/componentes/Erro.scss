@@ -1,0 +1,30 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #Error {
+        @include mixins.box();
+        align-items: center;
+        @include mixins.txt-config(3rem, 2rem);
+        color: red;
+        padding-top: 4rem;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #Error {
+        @include mixins.box();
+        align-items: center;
+        @include mixins.txt-config(3rem, 2rem);
+        color: red;
+        padding-top: 4rem;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #Error {
+        @include mixins.box();
+        align-items: center;
+        @include mixins.txt-config(3rem, 2rem);
+        color: red;
+        padding-top: 4rem;
+    }
+}

@@ -1,0 +1,58 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #stFooter{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        text-align: center;
+        border-top: 1px solid #ccc;
+
+        background-color: variaveis.$azul-escuro;
+        
+    }
+
+    #btnFooter {
+        @include mixins.div-config(50%, 6rem);
+        background-color: variaveis.$azul-escuro;
+        @include mixins.txt-config(3rem, 1rem);
+        
+        border: none;
+    }
+
+    #iconFooter {
+        color: variaveis.$branco;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #stFooter{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #f8f8f8;
+        text-align: center;
+        border-top: 1px solid #ccc;
+
+        background-color: variaveis.$azul-escuro;
+        
+    }
+
+    #btnFooter {
+        @include mixins.div-config(50%, 6rem);
+        background-color: variaveis.$azul-escuro;
+        @include mixins.txt-config(3rem, 1rem);
+        
+        border: none;
+    }
+
+    #iconFooter {
+        color: variaveis.$branco;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}

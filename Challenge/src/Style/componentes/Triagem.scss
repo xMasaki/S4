@@ -1,0 +1,128 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+
+    #itemsTriagem {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include mixins.txt-config(2rem, 600);
+            color: variaveis.$cinza-escuro;
+        }
+        
+    }
+    #formTriagem {
+        @include mixins.div-config(95%, auto);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem;
+        gap: 1rem;
+
+        background-color: variaveis.$cinza-box;
+        border: none;
+        border-radius: 1rem;
+        button {
+            background-color: variaveis.$cinza-box;
+            @include mixins.txt-config(1.5rem, auto);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            color: variaveis.$cinza-escuro;
+        }
+    }
+    #divTriagem {
+        display: flex;
+        justify-content: space-between;
+        label {
+            @include mixins.txt-config(1.1rem, 600);
+            color: variaveis.$cinza-escuro;
+        }
+        input, select {
+            @include mixins.div-config(45%, auto);
+            background-color: variaveis.$cor-menu;
+            border-radius: 1rem;
+            border: 1px solid variaveis.$cinza-escuro;
+            padding: .1rem;
+        }
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #itemsTriagem {
+        @include mixins.box();
+        flex-direction: column;
+        align-items: center;
+        h2 {
+            @include mixins.txt-config(2rem, 600);
+            color: variaveis.$cinza-escuro;
+        }
+        
+    }
+    #formTriagem {
+        @include mixins.div-config(30rem, auto);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        padding: 1rem;
+        gap: 1rem;
+
+        background-color: variaveis.$cinza-box;
+        border: none;
+        border-radius: 1rem;
+        button {
+            background-color: variaveis.$cinza-box;
+            @include mixins.txt-config(1.5rem, auto);
+            border: 1px solid variaveis.$cinza-escuro;
+            border-radius: .5rem;
+            margin-top: 1rem;
+            color: variaveis.$cinza-escuro;
+        }
+    }
+    #divTriagem {
+        display: flex;
+        justify-content: space-between;
+        label {
+            @include mixins.txt-config(1.1rem, 600);
+            color: variaveis.$cinza-escuro;
+        }
+        input, select {
+            @include mixins.div-config(45%, auto);
+            background-color: variaveis.$cor-menu;
+            border-radius: 1rem;
+            border: 1px solid variaveis.$cinza-escuro;
+            padding: .1rem;
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+
+}
+
+// @media screen and (max-width: 767px) {}
+// @media screen and (min-width: 768px) and (max-width: 1023px) {}
+// @media screen and (min-width: 1024px) {}
+
+
+// @include mixins.box();
+// @include mixins.div-config(w, h);
+// @include mixins.txt-config(fs, fw);
+
+
+// variaveis.$azul-escuro;
+// variaveis.$azul;
+
+// variaveis.$cinza-escuro;
+// variaveis.$cinza-claro;
+
+// variaveis.$cinza-box;
+// variaveis.$cor-modal;
+// variaveis.$cor-menu;
+
+// variaveis.$preto;
+// variaveis.$branco;
+
+// background-color: #F7C2C2;

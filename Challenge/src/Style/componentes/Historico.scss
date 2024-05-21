@@ -1,0 +1,107 @@
+@use '../variaveis.scss';
+@use '../mixins.scss';
+
+@media screen and (max-width: 767px) {
+    #itemsHistorico {
+        margin-bottom: 8rem
+    }
+    #tituloHistorico {
+        @include mixins.box();
+
+        @include mixins.txt-config(2rem, 600);
+        color: variaveis.$azul-escuro;
+
+        padding-bottom: 1rem;
+    }
+
+    #btnsHistorico {
+        display: flex;
+        justify-content: space-around
+    }
+
+    #btnHistorico {
+        padding: .3rem 1.5rem;
+        border: none;
+        border-radius: 4rem;
+
+        @include mixins.txt-config(1.5rem, 600);
+        color: variaveis.$cinza-escuro;
+        background-color: variaveis.$cinza-box;;
+    }
+
+    #boxHistorico{
+        @include mixins.box();
+        flex-direction: column;
+        margin: 0 auto;
+        @include mixins.div-config(95%, 8rem);
+        background-color: variaveis.$cinza-box;
+
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+    }
+    #tituloBoxHistorico {
+        @include mixins.txt-config(1.5rem, 600);
+        color: variaveis.$cinza-escuro;
+    }
+    #textoBoxHistorico {
+        @include mixins.txt-config(1rem, 400);
+        color: variaveis.$cinza-escuro;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #itemsHistorico {
+        margin-bottom: 8rem
+    }
+    #tituloHistorico {
+        @include mixins.box();
+
+        @include mixins.txt-config(2rem, 600);
+        color: variaveis.$azul-escuro;
+
+        padding-bottom: 1rem;
+    }
+
+    #btnsHistorico {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    #btnHistorico {
+        padding: .3rem 1.5rem;
+        border: none;
+        border-radius: 4rem;
+
+        @include mixins.txt-config(1.5rem, 600);
+        color: variaveis.$cinza-escuro;
+        background-color: variaveis.$cinza-box;;
+    }
+
+    #boxHistorico{
+        @include mixins.box();
+        flex-direction: column;
+        margin: 0 auto;
+        @include mixins.div-config(30rem, 8rem);
+        background-color: variaveis.$cinza-box;
+
+        padding: 1rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+    }
+    #tituloBoxHistorico {
+        @include mixins.txt-config(1.5rem, 600);
+        color: variaveis.$cinza-escuro;
+    }
+    #textoBoxHistorico {
+        @include mixins.txt-config(1rem, 400);
+        color: variaveis.$cinza-escuro;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
