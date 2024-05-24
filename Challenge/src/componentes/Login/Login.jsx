@@ -13,9 +13,9 @@ function verificarCredenciais(registro, senha) {
 }  
 
 export default function Login() {
-    const [registro, valRegistro] = useState('');
-    const [senha, valSenha] = useState('');
-    const [erro, valErro] = useState('');
+    const [registro, setRegistro] = useState('');
+    const [senha, setSenha] = useState('');
+    const [erro, setErro] = useState('');
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -31,7 +31,7 @@ export default function Login() {
                 window.location.href = "Medico";
             }
         } else {
-            valErro('Login inválido!');
+            setErro('Login inválido!');
         }
     }
 
@@ -45,8 +45,8 @@ export default function Login() {
 
                 {erro && <p style={{ color: 'red' }}>{erro}</p>}
                 <form id='formLogin' onSubmit={handleSubmit}>
-                        <input id='registroLogin' type="number" placeholder='Digite seu registro' value={registro} onChange={(e) => valRegistro(e.target.value)} />
-                        <input id='senhaLogin' type="password" placeholder='Digite sua senha' value={senha} onChange={(e) => valSenha(e.target.value)} />
+                        <input id='registroLogin' type="number" placeholder='Digite seu registro' value={registro} onChange={(e) => setRegistro(e.target.value)} />
+                        <input id='senhaLogin' type="password" placeholder='Digite sua senha' value={senha} onChange={(e) => setSenha(e.target.value)} />
                     <button id='btnLogin' type="submit">Entrar</button>
                     <span>
                         <GoogleLogin

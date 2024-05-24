@@ -6,8 +6,8 @@ import '../../Style/componentes/Medico.scss';
 
 export default function Home() {
     const navigate = useNavigate();
-    const [registroInput, valRegistroInput] = useState('');
-    const [dadosDoRegistro, valDadosDoRegistro] = useState(null);
+    const [registroInput, setRegistroInput] = useState('');
+    const [dadosDoRegistro, setDadosDoRegistro] = useState(null);
 
     const handlePacientes = () => navigate("/pacientes");
     const handleAdicionarExame = () => navigate("/adicionarExame");
@@ -16,14 +16,14 @@ export default function Home() {
         const registro = registroInput.trim();
         if (registro !== '') {
             const registroEncontrado = dados.find(item => item.registro === registro);
-            valDadosDoRegistro(registroEncontrado);
+            setDadosDoRegistro(registroEncontrado);
         }
     };
 
     return (
         <div id='homeMedico'>
             <div id='buscaMedico'>
-                <input id='inputBuscar' placeholder='Buscar pacientes' type="text" value={registroInput} onChange={e => valRegistroInput(e.target.value)} />
+                <input id='inputBuscar' placeholder='Buscar pacientes' type="text" value={registroInput} onChange={e => setRegistroInput(e.target.value)} />
                 <button id='btnBuscar' onClick={handleBuscar}>Buscar</button>
             </div>
             {dadosDoRegistro && (

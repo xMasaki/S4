@@ -4,10 +4,10 @@ import dados from '../json/dados.json';
 
 import "../../Style/componentes/AdicionarExame.scss"
 
-function AdicionarExame() {
-    const [registro, valRegistro] = useState('');
-    const [exame, valExame] = useState('');
-    const [data, valData] = useState('');
+export default function AdicionarExame() {
+    const [registro, setRegistro] = useState('');
+    const [exame, setExame] = useState('');
+    const [data, setData] = useState('');
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -20,9 +20,9 @@ function AdicionarExame() {
             registroExistente.numExame = (registroExistente.exame.length).toString();
             fs.writeFileSync('../json/dados.json', JSON.stringify(dados));
 
-            valRegistro('');
-            valExame('');
-            valData('');
+            setRegistro('');
+            setExame('');
+            setData('');
         } else {
             console.log('Registro não encontrado.');
         }
@@ -34,11 +34,11 @@ function AdicionarExame() {
             <form id='formAdicionar' onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="registro">Registro: </label>
-                    <input type="text" id="registro" value={registro} onChange={(e) => valRegistro(e.target.value)} />
+                    <input type="text" id="registro" value={registro} onChange={(e) => setRegistro(e.target.value)} />
                 </div>
                 <div>
                     <label htmlFor="exame">Exame: </label>
-                    <select id="exame" value={exame} onChange={(e) => valExame(e.target.value)}>
+                    <select id="exame" value={exame} onChange={(e) => setExame(e.target.value)}>
                         <option value="">Selecione</option>
                         <option value="tomografia">Tomografia</option>
                         <option value="hemograma">Hemograma</option>
@@ -48,7 +48,7 @@ function AdicionarExame() {
                 </div>
                 <div>
                     <label htmlFor="data">Data: </label>
-                    <input type="date" id="data" value={data} onChange={(e) => valData(e.target.value)} />
+                    <input type="date" id="data" value={data} onChange={(e) => setData(e.target.value)} />
                 </div>
 
                 <button type="submit">Adicionar Exame</button>
@@ -56,5 +56,3 @@ function AdicionarExame() {
         </div>
     );
 }
-
-export default AdicionarExame;

@@ -32,6 +32,7 @@
     }
 }
 
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #registroLista{
         @include mixins.box();
@@ -66,6 +67,7 @@
         }
     }
 }
+
 
 @media screen and (min-width: 1024px) {
     #registroLista{

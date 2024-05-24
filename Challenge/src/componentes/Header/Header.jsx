@@ -37,7 +37,6 @@ export default function Header() {
               <Link to='Medico' id='navMedico'>Médico</Link>
               <Link to='Pacientes' id='navPacientes'>Lista de Pacientes</Link>
               <Link to='adicionarExame' id='navAdicionarExame'>Adicionar Exame</Link>
-
             </div>
         </nav>
     </header>

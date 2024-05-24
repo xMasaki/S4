@@ -27,7 +27,6 @@ export default function Exames() {
             <div id='pacienteListaRow'>
               <p>Endereço: {paciente.endereco}, {paciente.numero}</p>
             </div>
-            
           </div>
         </button>
       ))}

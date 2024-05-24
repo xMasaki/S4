@@ -50,6 +50,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #itemsTriagem {
         @include mixins.box();
@@ -98,6 +100,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 1024px) {
     #itemsTriagem {
         @include mixins.box();
@@ -147,28 +151,3 @@
         }
     }
 }
-
-// @media screen and (max-width: 767px) {}
-// @media screen and (min-width: 768px) and (max-width: 1023px) {}
-// @media screen and (min-width: 1024px) {}
-
-
-// @include mixins.box();
-// @include mixins.div-config(w, h);
-// @include mixins.txt-config(fs, fw);
-
-
-// variaveis.$azul-escuro;
-// variaveis.$azul;
-
-// variaveis.$cinza-escuro;
-// variaveis.$cinza-claro;
-
-// variaveis.$cinza-box;
-// variaveis.$cor-modal;
-// variaveis.$cor-menu;
-
-// variaveis.$preto;
-// variaveis.$branco;
-
-// background-color: #F7C2C2;

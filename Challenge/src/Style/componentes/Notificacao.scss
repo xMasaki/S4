@@ -41,6 +41,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #itemsNotificacao {
         @include mixins.box();
@@ -81,6 +83,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 1024px) {
     #itemsNotificacao {
         @include mixins.box();

@@ -25,6 +25,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #bdPerfil {
         @include mixins.box();
@@ -47,6 +49,8 @@
         }
     }
 }
+
+
 @media screen and (min-width: 1024px) {
     #bdPerfil {
         @include mixins.box();
