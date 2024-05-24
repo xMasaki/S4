@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import dados from "../json/dados.json"
 import logo from "../../img/logo.png"
 import txtLogo from "../../img/S.png"
+import { GoogleLogin } from '@react-oauth/google';
 
 import "../../Style/componentes/Login.scss"
 
@@ -47,8 +48,19 @@ export default function Login() {
                         <input id='registroLogin' type="number" placeholder='Digite seu registro' value={registro} onChange={(e) => valRegistro(e.target.value)} />
                         <input id='senhaLogin' type="password" placeholder='Digite sua senha' value={senha} onChange={(e) => valSenha(e.target.value)} />
                     <button id='btnLogin' type="submit">Entrar</button>
+                    <span>
+                        <GoogleLogin
+                        onSuccess={credentialResponse => {
+                            console.log(credentialResponse);
+                        }}
+                        onError={() => {
+                            console.log('Login Failed');
+                        }}
+                        />;
+                    </span>
                 </form>
             </div>
+
         </div>
     );
 }

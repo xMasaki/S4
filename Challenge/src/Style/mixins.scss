@@ -3,6 +3,12 @@
     justify-content: center;
 }
 
+@mixin div-grid($r, $c) {
+    display: grid;
+    grid-template-rows: $r;
+    grid-template-columns: $c;
+}
+
 @mixin div-config($w, $h) {
     width: $w;
     height: $h;
@@ -22,6 +28,7 @@
 
 // @include mixins.box();
 // @include mixins.div-config(w, h);
+// @include mixins.div-config-grid($r, $c);
 // @include mixins.txt-config(fs, fw);
 
 

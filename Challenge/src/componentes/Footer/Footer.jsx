@@ -14,6 +14,7 @@ export default function Footer() {
             <button id='btnFooter'>
                 <Link to="/perfil"><FaUserAlt id='iconFooter' /></Link>
             </button>
+            <p id='webFooter'>ⓒ Copyright 2024 SISSI</p>
         </footer>
     );
 }

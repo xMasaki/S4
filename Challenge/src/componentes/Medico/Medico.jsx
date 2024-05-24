@@ -23,12 +23,7 @@ export default function Home() {
     return (
         <div id='homeMedico'>
             <div id='buscaMedico'>
-                <input id='inputBuscar'
-                    placeholder='Buscar pacientes'
-                    type="text"
-                    value={registroInput}
-                    onChange={e => valRegistroInput(e.target.value)}
-                />
+                <input id='inputBuscar' placeholder='Buscar pacientes' type="text" value={registroInput} onChange={e => valRegistroInput(e.target.value)} />
                 <button id='btnBuscar' onClick={handleBuscar}>Buscar</button>
             </div>
             {dadosDoRegistro && (
@@ -63,8 +58,10 @@ export default function Home() {
                     </div>
                 </div>
             )}
-            <button id='listaMedico' onClick={handlePacientes}>Lista de Pacientes</button>
-            <button id='listaMedico' onClick={handleAdicionarExame}>Adicionar Exames</button>
+            <div id='btnsLateral'>
+                <button id='listaMedico' onClick={handlePacientes}>Lista de Pacientes</button>
+                <button id='listaMedico' onClick={handleAdicionarExame}>Adicionar Exames</button>
+            </div>
         </div>
     );
 }

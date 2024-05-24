@@ -2,9 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
-// import './index.css'
-// import './App.scss' -> style vem do App.jsx
-// import paginas
+import { GoogleOAuthProvider } from '@react-oauth/google';
+
 import Erro from './componentes/Erro/Erro.jsx'
 import Home from './componentes/Home/Home.jsx'
 import Exames from './componentes/Exames/Exames.jsx'
@@ -37,7 +36,7 @@ const router = createBrowserRouter([
       {path: '/triagem', element: <Triagem/>},
       {path: '/medico', element: <Medico/>},
       {path: '/pacientes', element: <Paciente/>},
-      {path: '/adicionarExame', element: <Addexames/>}
+      {path: '/adicionarExame', element: <Addexames/>},
     ]
   }
 ])
@@ -46,6 +45,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <GoogleOAuthProvider clientId="744062802750-320u3mho1ujdkfjtcajqc9ukb3slp69d.apps.googleusercontent.com">
+      <RouterProvider router={router}/>
+    </GoogleOAuthProvider>
   </React.StrictMode>,
 )

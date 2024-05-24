@@ -25,6 +25,9 @@
     #iconFooter {
         color: variaveis.$branco;
     }
+    #webFooter {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -51,8 +54,31 @@
     #iconFooter {
         color: variaveis.$branco;
     }
+    #webFooter {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    #stFooter{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: variaveis.$azul-escuro;
+        
+    }
 
+    #btnFooter {
+        display: none;
+    }
+
+    #iconFooter {
+        color: variaveis.$branco;
+    }
+    #webFooter {
+        margin: .5rem;
+        color: variaveis.$branco;
+        @include mixins.txt-config(1rem, 1rem);
+    }
 }

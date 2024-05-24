@@ -1,70 +1,35 @@
-import React, { useState } from 'react';
-import fs from "fs";
+import React, { useState, useEffect } from 'react';
 import dados from '../json/dados.json';
 
+import '../../Style/componentes/Perfil.scss';
+
 export default function Perfil() {
-    const [email, valEmail] = useState('');
-    const [confirmarEmail, valConfirmarEmail] = useState('');
-    const [contato, valContato] = useState('');
-    const [confirmarContato, valConfirmarContato] = useState('');
+  const [usuario, setUsuario] = useState(null);
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+  useEffect(() => {
+    const usuarioLocalStorage = JSON.parse(localStorage.getItem('usuario'));
+    if (usuarioLocalStorage) {
+      const usuarioEncontrado = dados.find((item) => item.registro === usuarioLocalStorage.registro);
+      if (usuarioEncontrado) {
+        setUsuario(usuarioEncontrado);
+      }
+    }
+  }, []);
 
-        const registro = JSON.parse(localStorage.getItem('usuario')).registro;
-
-        const registroExistente = dados.find(item => item.registro === registro);
-
-        if (registroExistente) {
-            if (email === confirmarEmail && contato === confirmarContato) {
-
-                registroExistente.email = email;
-                registroExistente.celular = contato;
-                fs.writeFileSync('../json/dados.json', JSON.stringify(dados));
-
-                valEmail('');
-                valConfirmarEmail('');
-                valContato('');
-                valConfirmarContato('');
-
-                alert('Dados atualizados com sucesso!');
-            } else {
-                alert('Os emails ou contatos não coincidem. Por favor, verifique.');
-            }
-        } else {
-            alert('Usuário não encontrado.');
-        }
-    };
-
-    return (
-        <div>
-            <div>
-                <h4>Nome</h4>
-                <div>
-                    <h5>nome</h5>
-                </div>
-            </div>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <h4>Digite seu e-mail</h4>
-                    <div>
-                        <input type="email" value={email} onChange={(e) => valEmail(e.target.value)} />
-                    </div>            
-                    <h4>Confirme seu e-mail</h4>
-                    <div>
-                        <input type="email" value={confirmarEmail} onChange={(e) => valConfirmarEmail(e.target.value)} />
-                    </div>            
-                    <h4>Digite seu contato</h4>
-                    <div>
-                        <input type="number" value={contato} onChange={(e) => valContato(e.target.value)} />
-                    </div>            
-                    <h4>Confirme seu contato</h4>
-                    <div>
-                        <input type="number" value={confirmarContato} onChange={(e) => valConfirmarContato(e.target.value)} />
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
+  return (
+    <div id='bdPerfil'>
+        <h2>Perfil</h2>
+      {usuario && (
+        <div id='itemsPerfil'>
+          <p>Número de Registro: {usuario.registro}</p>
+          <p>Nome: {usuario.nome} {usuario.sobrenome}</p>
+          <p>Celular: {usuario.celular}</p>
+          <p>Sexo: {usuario.sexo}</p>
+          <p>E-mail: {usuario.email}</p>
+          <p>Endereço: {usuario.endereco}</p>
+          <p>Número: {usuario.numero}</p>
         </div>
-    );
+      )}
+    </div>
+  );
 }

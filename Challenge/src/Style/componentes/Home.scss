@@ -50,3 +50,28 @@
         border-radius: 1rem
     }
 }
+
+@media screen and (min-width: 1024px) {
+    #bdHome {
+        @include mixins.box();
+        align-items: center;
+        margin: 0 10rem
+    }
+    
+    #btnHome {
+        @include mixins.div-config(95%, 25rem);
+        @include mixins.box();
+        align-items: center;
+        margin: 1vh;
+        padding: 30px;
+
+
+        @include mixins.txt-config(3rem, 600);
+
+        background-color: variaveis.$cinza-box;
+        color: variaveis.$cinza-claro;
+
+        border: none;
+        border-radius: 1rem
+    }
+}
